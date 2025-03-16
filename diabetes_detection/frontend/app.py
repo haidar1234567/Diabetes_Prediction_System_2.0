@@ -1,13 +1,18 @@
+import os
 import pickle
 import streamlit as st
 import numpy as np
 
-# path of file of model 
-file_path = r"C:\Users\A\my_project\diabetes_detection\backend\Diabetes_Prediction.pkl"
+# Get the current directory of the script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# load the model  
-Classifier = pickle.load(open(file_path, "rb"))
+# Path to the .pkl file (relative path)
+file_path = os.path.join(BASE_DIR, "..", "backend", "Diabetes_Prediction.pkl")
 
+# Load the model
+with open(file_path, "rb") as file:
+    Classifier = pickle.load(file)
+    
 #  Streamlit App UI
 st.title("🩺 Diabetes Prediction App")
 st.write("Enter your details below to check for diabetes risk.")
