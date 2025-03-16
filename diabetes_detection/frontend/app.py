@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 
 # path of file of model 
-file_path = r"C:\Users\A\Documents\python\webApp\Diabetes_Prediction.pkl"
+file_path = r"C:\Users\A\my_project\diabetes_detection\backend\Diabetes_Prediction.pkl"
 
 # load the model  
 Classifier = pickle.load(open(file_path, "rb"))
