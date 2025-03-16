@@ -1,0 +1,6 @@
+scikit-learn
+pandas
+numpy
+streamlit
+xgboost  # (Agar aapne XGBoost use kiya hai)
+lightgbm  # (Agar aapne LightGBM use kiya hai)
